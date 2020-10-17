@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 def home():
     response = request.args['response']
     try:
-        return response
+        return "Your response is:" + response
     except KeyError:
         return f'Invalid response'
         
