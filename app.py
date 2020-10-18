@@ -5,9 +5,12 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    response = request.args['response']
+    response = request.args['request']
     try:
-        return "Your response is: " + response
+        if response:
+            return "Your request is: " + response
+        else:
+            return "Please enter a request using using ?response=foo"
     except KeyError:
-        return f'Invalid response'
+        return f'Invalid request'
         
