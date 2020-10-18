@@ -1,7 +1,29 @@
 {
-    "name": "Flask Sample Api",
-    "description": "A barebones Flask api app",
-    "repository": "https://github.com/PaulyFleming/hello-flask-pf",
-    "logo": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png",
-    "keywords": ["flask", "api"]
+  "name": "hsa-env-vars-example1",
+  "scripts": {
+      "postdeploy": ""
+  },
+  "env": {
+      "DEVELOPMENT": "true"
+  },
+  "formation": {
+      "web": {
+          "quantity": 1
+      }
+  },
+  "addons": [
+      "papertrail"
+  ],
+  "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+  ],
+  "stack": "heroku-18",
+  "environments": {
+      "test": {
+          "scripts": {
+          }
+      }
   }
+}
