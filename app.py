@@ -14,7 +14,7 @@ port = int(os.environ.get('PORT', 5000))
 
 @app.route('/', methods=['GET'])
 def home():
-    print(f"Development environment = {development}", flush=True)
+    print(f"Developments environment = {development}", flush=True)
 
     response = request.args['request']
     try:
