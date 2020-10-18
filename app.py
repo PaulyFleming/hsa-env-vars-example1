@@ -18,7 +18,7 @@ def home():
 
     response = request.args['request']
     try:
-        return "Your test request is: " + response
+        return "Your request is: " + response
         
     except KeyError:
         return f'Invalid request'
