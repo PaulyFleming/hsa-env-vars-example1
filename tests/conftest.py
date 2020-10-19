@@ -2,7 +2,7 @@ import flask
 
 app = flask.FLask(__name__)
 
-def test_base_route('/'):
+with app.test_request_context('/'):
 
     assert flask.request.path == '/'
     
