@@ -1,8 +1,7 @@
 import flask
 
-app = flask.Flask(__name__)
-
-with app.test_request_context('/'):
-
-    assert flask.request.path == '/'
+def basic_test1():
+    x = 5
+    y = 10
+    assert x < 5
     
