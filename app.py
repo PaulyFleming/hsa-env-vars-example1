@@ -14,7 +14,7 @@ port = int(os.environ.get('PORT', 5000))
 
 @app.route('/')
 def hello_world():
-    return "Hello world. To make requests go to /requests"
+    return "Hello world!"
 
 @app.route('/requests', methods=['GET'])
 def home():
