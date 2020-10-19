@@ -1,6 +1,6 @@
 import flask
 
-app = flask.FLask(__name__)
+app = flask.Flask(__name__)
 
 with app.test_request_context('/'):
 
