@@ -23,6 +23,7 @@
   "environments": {
       "test": {
           "scripts": {
+            "test": "pytest tests/conftest.py"
           }
       }
   }

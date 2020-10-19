@@ -12,7 +12,11 @@ development = os.environ.get('DEVELOPMENT')
 # get PORT from os, or use 5000 if not set
 port = int(os.environ.get('PORT', 5000))
 
-@app.route('/', methods=['GET'])
+@app.route('/')
+def hello_world():
+    return "Hello world!"
+
+@app.route('/requests', methods=['GET'])
 def home():
     print(f"Development environment = {development}", flush=True)
 
